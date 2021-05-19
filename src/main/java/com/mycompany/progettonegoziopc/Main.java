@@ -63,22 +63,6 @@ public class Main {
                     }
                      case 2:
                     {
-                        
-                        System.out.println("Codice-->");
-                        ripiano=tastiera.nextInt();
-                        System.out.println("Nome");
-                        posizione=tastiera.nextInt();
-                        
-                        Pc=s1.getLibro(codice, nome);
-                        if (libro==null)
-                            System.out.println("nessun libro presente in questa posizione");
-                        else
-                        {
-                            System.out.println(libro.toString()); 
-                        }
-                       
-                         System.out.println("premi un pulsante per continuare");
-                          tastiera.nextLine();
                         break;
                     }
                     
