@@ -9,9 +9,70 @@ package com.mycompany.progettonegoziopc;
  *
  * @author almab
  */
-public class NegozioPC {
+  
+public class NegozioPC  
+{
+    private Pc[] elencoComputer;
+    private final int N_MAX_PC=100;
+     private int nPCPresenti=0;
+   
     
+     public NegozioPC ()
+      {
+          elencoComputer=new Pc[N_MAX_PC];
+      }
      
-     private static final int NUM_MAX_COMPUTER=1000;
-    
+     
+     public int aggiungiPc(Pc computer)
+    {
+        if (nPCPresenti>N_MAX_PC)
+            return -1;      
+        elencoComputer[nPCPresenti] = new Pc(computer.getNome(),computer.getCodice(),computer.getQuantita());
+        nPCPresenti++;
+        return 0;
+    }
+      
+      
+      
+       public int rimuoviPc(int posizione)
+    {
+        
+        try
+        {
+            if(elencoComputer[posizione]==null)
+               return -2;           
+            elencoComputer[posizione]=null;
+            return posizione;
+        }
+        catch(ArrayIndexOutOfBoundsException posizioneNonValida)
+        {
+            return -1;
+        }
+        
+           
+    }
+       
+       public String toString()
+    {
+        Pc t;
+        String s="";
+        for(int i=0;i<N_MAX_PC;i++)
+        {
+            if(elencoComputer[i]!=null)
+            {
+                t=elencoComputer[i];
+                s=s+"Posizione:  "+i+t.toString()+"\n";
+            }   
+        }
+        return s;
+    }
+      
+  
+     
 }
+
+
+
+
+  
+ 
