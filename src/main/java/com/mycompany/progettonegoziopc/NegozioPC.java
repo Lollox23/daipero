@@ -52,6 +52,69 @@ public class NegozioPC
            
     }
        
+       
+       
+        public int AggiungiUnaCertaQuantitaDiPc(String nome,int quantita)
+    {
+        for(int i=0;i<nPCPresenti;i++)
+        {
+            if(elencoComputer[i].getNome().compareToIgnoreCase(nome)==0)
+                
+            {
+                quantita=quantita+elencoComputer[i].getQuantita();
+                elencoComputer[i].setQuantita(quantita);
+            }
+            
+            
+         }
+        
+        
+           return 0;
+    }
+        
+        
+           public int DecrementaUnaCertaQuantitaDiPc(String nome,int quantita)
+    {
+        for(int i=0;i<nPCPresenti;i++)
+        {
+            if(elencoComputer[i].getNome().compareToIgnoreCase(nome)==0)
+                
+            {
+                quantita=quantita-elencoComputer[i].getQuantita();
+                elencoComputer[i].setQuantita(quantita);
+            }
+            
+            
+         }
+        
+        
+           return 0;
+    }
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+      
+       
        public String toString()
     {
         Pc t;
