@@ -90,6 +90,19 @@ public class NegozioPC
         
            return 0;
     }
+           
+           
+           public void salvaComputer (String nomeFile) throws IOException, EccezionePosizioneNonValida, FileException
+           {
+              TextFile f
+           }
+           
+           
+           
+           
+           
+           
+ 
        
        
        
